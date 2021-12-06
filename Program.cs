@@ -9,4 +9,5 @@ Console.WriteLine($"Problem Input: {Day1.NumberOfDecreasingWindows(Util.ReadInts
 Console.WriteLine("Day2_Part1");
 Console.WriteLine($"Sample Input: {Day2.Part1.PositionPart2(File.ReadAllLines("Day2/input.txt"))}");
 */
-Day3.Run();
+// Day4.Run();
+Day5.Run();
