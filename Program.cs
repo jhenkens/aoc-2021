@@ -10,4 +10,4 @@ Console.WriteLine("Day2_Part1");
 Console.WriteLine($"Sample Input: {Day2.Part1.PositionPart2(File.ReadAllLines("Day2/input.txt"))}");
 */
 // Day4.Run();
-Day6.Run();
+Day7.Run();
