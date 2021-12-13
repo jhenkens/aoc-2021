@@ -10,4 +10,14 @@ Console.WriteLine("Day2_Part1");
 Console.WriteLine($"Sample Input: {Day2.Part1.PositionPart2(File.ReadAllLines("Day2/input.txt"))}");
 */
 // Day4.Run();
-Day8.Run();
+using System.Reflection;
+
+Assembly mscorlib = typeof(Program).Assembly;
+var pq = new PriorityQueue<Type, int>();
+foreach (Type type in mscorlib.GetTypes())
+{
+    if(type.Name.StartsWith("Day")){
+        pq.Enqueue(type, int.MaxValue - int.Parse(type.Name[3..]));
+    }
+}
+pq.Dequeue().GetMethod("RunAocDay").Invoke(null,null);
